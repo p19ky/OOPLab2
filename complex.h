@@ -2,30 +2,31 @@
 #include <math.h>
 
 //modului unui nr complex
-double abs(double a, double b)
+double Complex::abs(Complex c)
 {
 	double z = 0;
-	z = sqrt(a * a + b * b);
+	z = sqrt(c.img * c.img + c.real * c.real);
 	return z;
 }
 
-void compute_polar(double a, double b)
+//forma trigonometrica
+void Complex::compute_polar(Complex c)
 {
-	double r = abs(a, b);
+	double r = abs(c);
 	double teta;
-	if (a > 0)
-		teta = atan(b / a);
-	if (a < 0)
-		teta = atan(b / a) + 3.1415926535;
+	if (c.real > 0)
+		teta = atan(c.img / c.real);
+	if (c.real < 0)
+		teta = atan(c.img / c.real) + 3.1415926535;
 
 	std::cout << "\nPolar form: " << r << "(cos(" << teta << ") + i*sin(" << teta << "))";
 }
 
-void sort(int arr[], int n)
+void Complex::sort(int arr[], int n)
 {
 	for (int i = 0; i < n; i++)
 		for (int j = i; j < n; j++)
-			if (abs(arr[i].img, arr[i].real) > abs(arr[j].img, arr[j].real))
+			//if (abs(arr[i].img, arr[i].real) > abs(arr[j].img, arr[j].real))
 			{
 				int aux = arr[i];
 				arr[i] = arr[j];

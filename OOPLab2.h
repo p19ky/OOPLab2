@@ -1,6 +1,6 @@
 #pragma once
-#include <iostream>
-
+#include "complex.h"
+#include <functions.cpp>
 using namespace std;
 
 class Complex {
@@ -21,9 +21,10 @@ public:
 	Complex(Complex& object); //Constructor for an attributed Complex Object 
 	
 	void Addition(Complex c); //Add 2 Complex Numbers
+
+	double abs(Complex c); //calculate absolute value of complex nr
+
+	void compute_polar(Complex c); //show polar form of complex nr
+
+	void sort(int arr[], int n);
 };
-
-int main()
-{
-
-}
