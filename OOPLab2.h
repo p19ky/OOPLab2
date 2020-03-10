@@ -1,12 +1,11 @@
 #pragma once
 #include <iostream>
 
-using std::cout;
-using std::cin;
+using namespace std;
 
 class Complex {
 
-private:
+public:
 
 	double real;
 	double img;
@@ -21,5 +20,10 @@ public:
 
 	Complex(Complex& object); //Constructor for an attributed Complex Object 
 	
-
+	void Addition(Complex c); //Add 2 Complex Numbers
 };
+
+int main()
+{
+
+}

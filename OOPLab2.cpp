@@ -27,6 +27,10 @@ Complex::Complex(Complex& obj)
 	img = obj.img;
 }
 
+void Complex::Addition(Complex c)
+{
+	real = real + c.real;
+	img = img + c.img;
 
-
+}
 
