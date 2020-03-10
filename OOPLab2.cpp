@@ -21,5 +21,12 @@ Complex::Complex(double r, double i)
 	img = i;
 }
 
+Complex::Complex(Complex& obj)
+{
+	real = obj.real;
+	img = obj.img;
+}
+
+
 
 

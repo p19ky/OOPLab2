@@ -19,6 +19,7 @@ public:
 
 	Complex(double r, double i); //Constructor with both real and imaginary part of the value
 
+	Complex(Complex& object); //Constructor for an attributed Complex Object 
 	
 
 };
