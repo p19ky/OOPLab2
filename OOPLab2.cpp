@@ -21,7 +21,7 @@ Complex::Complex(double r, double i)
 	img = i;
 }
 
-Complex::Complex(Complex& obj)
+Complex::Complex(const Complex& obj)
 {
 	real = obj.real;
 	img = obj.img;
@@ -61,14 +61,6 @@ Complex Complex::quot(Complex c)
 
 int main()
 {
-	Complex c1(2, 5);
-	//cout<< c1.abs(c1);
-	//cout << c1.img;
-	//cout << abs(c1);
-	Complex c2(3, 4);
-
-	c1 = c1.quot(c2);
-	c1.show_cmpl();
-
+	myTests();
 	return 0;
 }

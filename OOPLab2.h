@@ -18,7 +18,7 @@ public:
 
 	void set_img(double im) { img = im; }
 
-	void show_cmpl() { cout << real << "+" << img << "i" << endl << endl; }
+	void show_cmpl() { cout << real << "+" << img << "i"; }
 
 	Complex(); // Default Constructor
 
@@ -26,14 +26,12 @@ public:
 
 	Complex(double r, double i); //Constructor with both real and imaginary part of the value
 
-	Complex(Complex& object); //Constructor for an attributed Complex Object 
+	Complex(const Complex& object); //Constructor for an attributed Complex Object 
 
-	Complex(const Complex& C) { cout << "copy constructor called" << endl; }
-
-	Complex& operator = (const Complex& C)
+	void operator=(Complex c)
 	{
-		cout << "Assignment operator called " << endl;
-		return *this;
+		real = c.real;
+		img = c.img;
 	}
 	
 	Complex add(Complex c); //Add 2 Complex Numbers
@@ -45,4 +43,5 @@ public:
 	double abs(Complex c); //calculate absolute value of complex nr
 
 	void compute_polar(Complex c); //show polar form of complex nr
+
 };
