@@ -30,7 +30,11 @@ public:
 
 	Complex(const Complex& C) { cout << "copy constructor called" << endl; }
 
-	Complex& operator = (const Complex& C) { cout << "assigment constructor called" << endl; }
+	Complex& operator = (const Complex& C)
+	{
+		cout << "Assignment operator called " << endl;
+		return *this;
+	}
 	
 	Complex add(Complex c); //Add 2 Complex Numbers
 	
