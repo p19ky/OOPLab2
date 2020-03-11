@@ -1,6 +1,4 @@
 #pragma once
-#include "complex.h"
-#include "functions.cpp"
 using namespace std;
 
 class Complex {
