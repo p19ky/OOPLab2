@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
 	Complex c1(2, 5);
-	cout << c1.img;
+	cout << c1.print;
 	//cout << abs(c1);
 	return 0;
 }

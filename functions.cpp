@@ -26,10 +26,36 @@ Complex::Complex(Complex& obj)
 	img = obj.img;
 }
 
-void Complex::Addition(Complex c)
-{
-	real = real + c.real;
-	img = img + c.img;
+ Complex Complex::add(Complex c)
+{	
+	Complex Add;
+
+	Add.real = real + c.real;
+	Add.img = img + c.img;
+
+	return Add;
 
 }
+
+ Complex Complex::mult(Complex c) 
+ {
+	 Complex Mult;
+
+	 Mult.real = real * c.real - img * c.img;
+	 Mult.img = real * c.img - c.real * img;
+
+	 return Mult;
+ }
+
+ Complex Complex::quot(Complex c)
+ {
+	Complex Quot;
+
+	 Quot.real = (real * c.real + img * c.img) / (c.real * c.real + c.img * c.img);
+	 Quot.img = (img * c.real + real * c.img) / (c.real * c.real + c.img * c.img);
+
+	 return Quot;
+ }
+
+
 
