@@ -18,7 +18,7 @@ public:
 
 	void set_img(double im) { img = im; }
 
-	void print() { cout << real << "+" << img << "i" << endl << endl; }
+	void show_cmpl() { cout << real << "+" << img << "i" << endl << endl; }
 
 	Complex(); // Default Constructor
 
@@ -37,6 +37,4 @@ public:
 	double abs(Complex c); //calculate absolute value of complex nr
 
 	void compute_polar(Complex c); //show polar form of complex nr
-
-	void sort(int arr[], int n);
 };

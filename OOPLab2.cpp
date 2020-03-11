@@ -43,7 +43,7 @@ Complex Complex::mult(Complex c)
 	Complex Mult;
 
 	Mult.real = real * c.real - img * c.img;
-	Mult.img = real * c.img - c.real * img;
+	Mult.img = real * c.img + c.real * img;
 
 	return Mult;
 }
@@ -53,7 +53,7 @@ Complex Complex::quot(Complex c)
 	Complex Quot;
 
 	Quot.real = (real * c.real + img * c.img) / (c.real * c.real + c.img * c.img);
-	Quot.img = (img * c.real + real * c.img) / (c.real * c.real + c.img * c.img);
+	Quot.img = (img * c.real - real * c.img) / (c.real * c.real + c.img * c.img);
 
 	return Quot;
 }
@@ -62,8 +62,13 @@ Complex Complex::quot(Complex c)
 int main()
 {
 	Complex c1(2, 5);
-	abs(c1);
+	//cout<< c1.abs(c1);
 	//cout << c1.img;
 	//cout << abs(c1);
+	Complex c2(3, 4);
+
+	c1 = c1.quot(c2);
+	c1.show_cmpl();
+
 	return 0;
 }

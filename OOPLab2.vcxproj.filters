@@ -23,5 +23,8 @@
     <ClInclude Include="OOPLab2.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="complex.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

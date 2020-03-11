@@ -22,7 +22,7 @@ void Complex::compute_polar(Complex c)
 	std::cout << "\nPolar form: " << r << "(cos(" << teta << ") + i*sin(" << teta << "))";
 }
 
-void Complex::sort(int arr[], int n)
+void sort(int arr[], int n)
 {
 	for (int i = 0; i < n; i++)
 		for (int j = i; j < n; j++)
