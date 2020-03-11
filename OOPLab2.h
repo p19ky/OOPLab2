@@ -27,6 +27,10 @@ public:
 	Complex(double r, double i); //Constructor with both real and imaginary part of the value
 
 	Complex(Complex& object); //Constructor for an attributed Complex Object 
+
+	Complex(const Complex& C) { cout << "copy constructor called" << endl; }
+
+	Complex& operator = (const Complex& C) { cout << "assigment constructor called" << endl; }
 	
 	Complex add(Complex c); //Add 2 Complex Numbers
 	
